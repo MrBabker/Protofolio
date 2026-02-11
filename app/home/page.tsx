@@ -8,6 +8,8 @@ import { typs } from "../projects/page";
 import { setGoupType } from "@/features/counter/counterSlice";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const projects = [
   {
@@ -42,10 +44,10 @@ const skills = [
   "TypeScript",
   "blender 3D",
   "Unity 3D",
-   "UI UX",
-    "Figma",
-     "Photoshop",
-   "Graphic designing",
+  "UI UX",
+  "Figma",
+  "Photoshop",
+  "Graphic designing",
 ];
 const skillsImages = [
   { src: "/icons/cs.png", sizx: 500, sizy: 500 },
@@ -68,7 +70,7 @@ export default function Home() {
 
   const router = useRouter();
   const headerHeight = 80; // px
-
+  const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   // Scroll to section with offset
   const scrollToSection = (id: string) => {
@@ -83,35 +85,81 @@ export default function Home() {
   return (
     <div className="font-sans bg-gray-900 text-white w-full overflow-x-hidden">
       {/* Header */}
-      <header className="fixed w-full bg-black/20 backdrop-blur-md z-50 h-20">
-        <div className=" flex justify-between items-center h-full px-8">
-          <nav className=" flex flex-row  items-center gap-5">
+      <header className="fixed w-full bg-black/30 backdrop-blur-md z-50 h-20">
+        <div className="flex justify-between items-center h-full px-4 md:px-8">
+          {/* Logo */}
+          <div className="flex items-center gap-4">
             <Image
-              className=" rounded-full"
+              className="rounded-full"
               src="/GamePad.png"
               alt="mbabker"
               width={40}
               height={40}
             />
-            <h1 className="text-xl md:text-2xl font-bold">Mohammed Babiker</h1>
+            <h1 className="text-lg md:text-2xl font-bold whitespace-nowrap">
+              Mohammed Babiker
+            </h1>
+          </div>
+
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex space-x-6 text-white">
+            {["about", "skills", "CV", "projects", "contact"].map(
+              (section, index) => (
+                <button
+                  key={section}
+                  onClick={() => {
+                    if (index !== 2) {
+                      scrollToSection(section);
+                    } else {
+                      window.open(
+                        "https://drive.google.com/file/d/10iLtUVU9xOGKV8Xb5l-hOFgmtExQhSS9/view?usp=sharing",
+                        "_blank",
+                      );
+                    }
+                  }}
+                  className="hover:text-indigo-400 transition"
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </button>
+              ),
+            )}
           </nav>
 
-          <nav className="space-x-6 text-white">
-            {["about", "skills", "CV","projects", "contact"].map((section,index) => (
-              <button
-                key={section}
-                onClick={() => {
-                  
-                if(index!==2) { scrollToSection(section)}else{
-                  router.push('https://drive.google.com/file/d/1mlgY8V1DHSgeek3viM2ow-gNm0FoqyKh/view?usp=sharing')
-                } }}
-                className="hover:text-indigo-500 transition"
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </button>
-            ))}
-          </nav>
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
+
+        {/* Mobile Dropdown */}
+        {isOpen && (
+          <div className="md:hidden bg-black/90 backdrop-blur-md flex flex-col items-center gap-6 py-6 text-white">
+            {["about", "skills", "CV", "projects", "contact"].map(
+              (section, index) => (
+                <button
+                  key={section}
+                  onClick={() => {
+                    if (index !== 2) {
+                      scrollToSection(section);
+                    } else {
+                      window.open(
+                        "https://drive.google.com/file/d/10iLtUVU9xOGKV8Xb5l-hOFgmtExQhSS9/view?usp=sharing",
+                        "_blank",
+                      );
+                    }
+                    setIsOpen(false);
+                  }}
+                  className="text-lg hover:text-indigo-400 transition"
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </button>
+              ),
+            )}
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
@@ -264,7 +312,8 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <button className=" cursor-pointer hover:scale-105 hover:text-blue-200 transition-transform duration-300"
+            <button
+              className=" cursor-pointer hover:scale-105 hover:text-blue-200 transition-transform duration-300"
               onClick={() => {
                 dispatch(setGoupType("all"));
                 router.push("/projects");
