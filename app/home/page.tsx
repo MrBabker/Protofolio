@@ -34,6 +34,7 @@ const projects = [
 
 const skills = [
   "C#",
+  "ASP.NET Core",
   "React",
   "Next.js",
   "Node.js",
@@ -51,6 +52,7 @@ const skills = [
 ];
 const skillsImages = [
   { src: "/icons/cs.png", sizx: 500, sizy: 500 },
+  { src: "/icons/dotnet.jpg", sizx: 500, sizy: 500 },
   { src: "/icons/reactjs.png", sizx: 200, sizy: 200 },
   { src: "/icons/next.png", sizx: 200, sizy: 200 },
   { src: "/icons/node.js.jpg", sizx: 500, sizy: 500 },
@@ -112,7 +114,7 @@ export default function Home() {
                       scrollToSection(section);
                     } else {
                       window.open(
-                        "https://drive.google.com/file/d/10iLtUVU9xOGKV8Xb5l-hOFgmtExQhSS9/view?usp=sharing",
+                        "https://drive.google.com/file/d/1HYJaoYH6hT2OUv7Dq9jJmIOv9ckmGerX/view?usp=sharing",
                         "_blank",
                       );
                     }
@@ -146,7 +148,7 @@ export default function Home() {
                       scrollToSection(section);
                     } else {
                       window.open(
-                        "https://drive.google.com/file/d/10iLtUVU9xOGKV8Xb5l-hOFgmtExQhSS9/view?usp=sharing",
+                        "https://drive.google.com/file/d/1HYJaoYH6hT2OUv7Dq9jJmIOv9ckmGerX/view?usp=sharing",
                         "_blank",
                       );
                     }
