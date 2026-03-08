@@ -190,7 +190,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Web & Mobile Developer | Software developer
+          Web & Mobile Developer | Software engineering
         </motion.p>
         <motion.button
           onClick={() => scrollToSection("projects")}
