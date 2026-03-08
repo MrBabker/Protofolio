@@ -65,6 +65,7 @@ const skillsImages = [
   { src: "/icons/unity.png", sizx: 500, sizy: 500 },
   { src: "/icons/ps.jpg", sizx: 500, sizy: 500 },
   { src: "/icons/mo.png", sizx: 500, sizy: 500 },
+  { src: "/icons/dok.png", sizx: 500, sizy: 500 },
 ];
 
 export default function Home() {
@@ -114,7 +115,7 @@ export default function Home() {
                       scrollToSection(section);
                     } else {
                       window.open(
-                        "https://drive.google.com/file/d/1HYJaoYH6hT2OUv7Dq9jJmIOv9ckmGerX/view?usp=sharing",
+                        "https://drive.google.com/file/d/1CyK3dDsgOU8H_5v1KfAbwWkEYsIXbbjT/view?usp=sharing",
                         "_blank",
                       );
                     }
@@ -148,7 +149,7 @@ export default function Home() {
                       scrollToSection(section);
                     } else {
                       window.open(
-                        "https://drive.google.com/file/d/1HYJaoYH6hT2OUv7Dq9jJmIOv9ckmGerX/view?usp=sharing",
+                        "https://drive.google.com/file/d/1CyK3dDsgOU8H_5v1KfAbwWkEYsIXbbjT/view?usp=sharing",
                         "_blank",
                       );
                     }
