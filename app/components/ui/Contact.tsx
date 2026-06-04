@@ -104,7 +104,7 @@ export default function Contact() {
                 }}
                 className="
                 bg-white/5
-                backdrop-blur-xl
+                md:backdrop-blur-xl
 
                 border
                 border-white/10

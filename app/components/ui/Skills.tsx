@@ -61,7 +61,7 @@ export default function Skills() {
       rounded-3xl
 
       bg-white/[0.03]
-      backdrop-blur-xl
+      md:backdrop-blur-xl
 
       border
       border-white/10
@@ -120,7 +120,7 @@ export default function Skills() {
 
           bg-purple-500/20
 
-          blur-2xl
+          md:blur-2xl
 
           opacity-0
           group-hover:opacity-100

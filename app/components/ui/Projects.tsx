@@ -83,7 +83,7 @@ export default function Projects() {
               rounded-3xl
 
               bg-white/5
-              backdrop-blur-xl
+              md:backdrop-blur-xl
 
               border
               border-white/10
@@ -140,7 +140,7 @@ export default function Projects() {
       justify-center
 
       bg-black/30
-      backdrop-blur-xl
+      md:backdrop-blur-xl
     "
                   >
                     <project.icon size={34} className="text-purple-400" />
@@ -230,7 +230,7 @@ export default function Projects() {
             border-white/10
 
             bg-white/5
-            backdrop-blur-xl
+            md:backdrop-blur-xl
 
             hover:bg-white/10
             hover:scale-105

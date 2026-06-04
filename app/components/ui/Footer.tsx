@@ -21,7 +21,7 @@ relative
   border-white/10
 
   bg-black/30
-  backdrop-blur-xl
+  md:backdrop-blur-xl
 
   overflow-hidden
   "
@@ -41,7 +41,8 @@ relative
 
     bg-purple-500/20
 
-    blur-3xl
+    blur-xl
+    md:blur-3xl
     "
       />
 

@@ -194,8 +194,8 @@ export default function Navbar() {
 
             md:hidden
 
-            bg-black/90
-            backdrop-blur-xl
+            bg-black/70
+            md:backdrop-blur-xl
 
             border-t
             border-white/10

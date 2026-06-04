@@ -407,7 +407,8 @@ min-h-screen
   from-purple-500/40
   to-cyan-500/40
 
-  blur-3xl
+  blur-xl
+  md:blur-3xl
   "
             />
 

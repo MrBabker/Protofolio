@@ -24,7 +24,7 @@ export function ProjectCard({ project }: any) {
       border
       border-white/10
       bg-white/[0.03]
-      backdrop-blur-md
+      md:backdrop-blur-md
       hover:border-cyan-400/40
       hover:shadow-2xl
       hover:shadow-cyan-500/10
