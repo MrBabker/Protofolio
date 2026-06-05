@@ -7,17 +7,7 @@ import Link from "next/link";
 export function ProjectHeader() {
   return (
     <header
-      initial={{
-        y: -80,
-        opacity: 0,
-      }}
-      animate={{
-        y: 0,
-        opacity: 1,
-      }}
-      transition={{
-        duration: 0.6,
-      }}
+      
       className="
       fixed
       top-0
