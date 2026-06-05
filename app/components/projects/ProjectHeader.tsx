@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function ProjectHeader() {
   return (
-    <motion.header
+    <header
       initial={{
         y: -80,
         opacity: 0,
@@ -25,7 +25,8 @@ export function ProjectHeader() {
       right-0
       z-50
       h-20
-      backdrop-blur-xl
+      backdrop-blur-sm
+      md:backdrop-blur-xl
       bg-black/30
       border-b
       border-white/10
@@ -135,6 +136,6 @@ export function ProjectHeader() {
           </Link>
         </nav>
       </div>
-    </motion.header>
+    </header>
   );
 }

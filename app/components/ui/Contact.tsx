@@ -26,8 +26,8 @@ const contacts = [
   },
   {
     title: "GitHub",
-    value: "Coming Soon",
-    href: "#",
+    value: "View Profile",
+    href: "https://github.com/MrBabker",
     icon: Github,
   },
 ];
